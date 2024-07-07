@@ -1,36 +1,48 @@
 {
   "expo": {
-    "name": "SemanaCulturalLatest",
+    "name": "Semana Cultural 2024",
     "slug": "SemanaCulturalLatest",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/logo_semana_cultural.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/logo_semana_cultural.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fabricioalv23.SemanaCultural"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/images/logo_semana_cultural.png",
+        "backgroundColor": "#ffffff",
+        "name": "Semana Cultural 2024"
+      },
+      "package": "com.fabricioalv23.SemanaCulturalLatest"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/logo_semana_cultural.png"
     },
     "plugins": [
       "expo-router"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "9d2fcadd-f959-4ec3-aa61-5151c7d9cc35"
+      }
+    },
+    "owner": "fabricioalv23"
   }
 }

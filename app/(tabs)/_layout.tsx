@@ -5,6 +5,8 @@ import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
@@ -13,22 +15,32 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
+        
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+          title: 'Tabla general',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name={'podium'} size={28} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="GamePositions"
         options={{
-          title: 'Explore',
+          title: 'Puntaje por actividad',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <MaterialCommunityIcons name={focused ? 'crown' : 'crown-outline'} size={34} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="ScheduleScreen"
+        options={{
+          title: 'Calendario',
+          tabBarIcon: ({ color, focused }) => (
+            <MaterialCommunityIcons name={focused ? 'calendar-month' : 'calendar-month-outline'} size={28} color={color} />
           ),
         }}
       />
